@@ -1,0 +1,6 @@
+id,Action,FieldID,FieldType,FieldValue,ExpectedResult
+1,NAV,xPath,null,null,Pass
+2,SET,gateway1_mode,DDL,Inactive,Pass
+3,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+4,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+5,GET,gateway1_mode,DDL,string:Inactive,Pass

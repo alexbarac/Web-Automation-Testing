@@ -1,0 +1,6 @@
+id,Action,FieldID,FieldType,FieldValue,Result
+1,NAV,xPath,null,null,Pass
+2,SET,xpath=//input[@name='macAddress'],text,00:09:02:14:00:12,Pass
+6,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],text,Apply &Save,Pass
+7,CLICK,xpath=/html/body/div/div[2]/div/div/form/div/button[3],text,Refresh,Pass
+8,GET,xpath=//input[@name='macAddress'],text,00:09:02:14:00:12,Pass

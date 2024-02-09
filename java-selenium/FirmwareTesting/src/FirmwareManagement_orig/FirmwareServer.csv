@@ -1,0 +1,18 @@
+id,Action,FieldID,FieldType,FieldValue,Result
+1,NAV,xPath,null,null,Pass
+2,SET,protocol,DDL,TFTP,Pass
+3,SET,xpath=//input[@name='ipAddress'],text,172.16.0.203,Pass
+4,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],text,Apply &Save,Pass
+5,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],text,Refresh,Pass
+6,GET,protocol,DDL,0,Pass
+7,GET,xpath=//input[@name='ipAddress'],text,172.16.0.203,Pass
+8,SET,protocol,DDL,FTP,Pass
+9,SET,xpath=//input[@name='ipAddress'],text,172.16.0.203,Pass
+10,SET,xpath=//input[@name='ftpUser'],text,corina,Pass
+11,SET,xpath=//input[@name='ftpPassword'],text,corina,Pass
+12,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],text,Apply &Save,Pass
+13,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],text,Refresh,Pass
+14,GET,protocol,DDL,1,Pass
+15,GET,xpath=//input[@name='ipAddress'],text,172.16.0.203,Pass
+16,GET,xpath=//input[@name='ftpUser'],text,corina,Pass
+17,GET,xpath=//input[@name='ftpPassword'],text,corina,Pass

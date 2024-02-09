@@ -1,0 +1,81 @@
+id,Action,FieldID,FieldType,FieldValue,Result
+1,NAV,xPath,null,null,Pass
+2,SET,vlanAwareEnable,checkbox,on,Pass
+3,SET,providerBridgeEnable,checkbox,on,Pass
+4,SET,xpath=//input[@name='defaultVlanID'],text,1,Pass
+5,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[1],text,Apply,Pass
+6,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],text,Apply & Save,Pass
+7,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],text,Refresh,Pass
+8,GET,vlanAwareEnable,checkbox,on,Pass
+9,GET,providerBridgeEnable,checkbox,on,Pass
+10,GET,defaultVlanID,text,1,Pass
+11,SET,xpath=//input[@name='port1Alias'],text,Sw_Eth_1,Pass
+12,SET,xpath=//input[@name='port1Mode'],DLL,Access,Pass
+13,SET,xpath=//input[@name='port1VlanID'],text,1,Pass
+14,SET,xpath=//input[@name='port1VlanPriority'],text,0,Pass
+15,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[1],text,Apply,Pass
+16,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],text,Apply & Save,Pass
+17,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],text,Refresh,Pass
+18,GET,xpath=//input[@name='port1Alias'],text,0,Pass
+19,GET,xpath=//input[@name='port1Mode'],DLL,0,Pass
+20,GET,xpath=//input[@name='port1VlanID'],text,1,Pass
+21,GET,xpath=//input[@name='port1VlanPriority'],text,0,Pass
+22,SET,xpath=//input[@name='port1Alias'],text,Sw_Eth_1,Pass
+23,SET,xpath=//input[@name='defaultVlanID'],text,5,Pass
+24,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[1],text,Apply,Pass
+25,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],text,Apply & Save,Pass
+26,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],text,Refresh,Pass
+27,SET,xpath=//input[@name='port1Mode'],DLL,Trunk,Pass
+28,SET,xpath=//input[@name='port1UntaggedIngressFrames'],DLL,Tag,Pass
+29,SET,xpath=//input[@name='port1VlanID'],text,1,Pass
+30,SET,xpath=//input[@name='port1VlanPriority'],text,0,Pass
+31,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[1],text,Apply,Pass
+32,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],text,Apply & Save,Pass
+33,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],text,Refresh,Pass
+34,GET,xpath=//input[@name='defaultVlanID'],text,5,Pass
+35,GET,xpath=//input[@name='port1Mode'],DLL,1,Pass
+36,GET,xpath=//input[@name='port1UntaggedIngressFrames'],DLL,0,Pass
+37,GET,xpath=//input[@name='port1VlanID'],text,1,Pass
+38,GET,xpath=//input[@name='port1VlanPriority'],text,0,Pass
+39,SET,xpath=//input[@name='port1UntaggedIngressFrames'],DLL,Drop,Pass
+40,SET,xpath=//input[@name='port1AllowedVlans'],text,1,Pass
+41,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[1],text,Apply,Pass
+42,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],text,Apply & Save,Pass
+43,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],text,Refresh,Pass
+44,GET,xpath=//input[@name='port1UntaggedIngressFrames'],DLL,1,Pass
+45,GET,xpath=//input[@name='port1AllowedVlans'],text,1,Pass
+46,SET,xpath=//input[@name='port2Alias'],text,Sw_Eth_2,Pass
+47,SET,xpath=//input[@name='port2Mode'],DLL,Access,Pass
+48,SET,xpath=//input[@name='port2VlanID'],text,1,Pass
+49,SET,xpath=//input[@name='port2VlanPriority'],text,0,Pass
+50,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[1],text,Apply,Pass
+51,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],text,Apply & Save,Pass
+52,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],text,Refresh,Pass
+53,GET,xpath=//input[@name='port2Alias'],text,0,Pass
+54,GET,xpath=//input[@name='port2Mode'],DLL,0,Pass
+55,GET,xpath=//input[@name='port2VlanID'],text,1,Pass
+56,GET,xpath=//input[@name='port2VlanPriority'],text,0,Pass
+57,SET,xpath=//input[@name='port2Alias'],text,Sw_Eth_1,Pass
+58,SET,xpath=//input[@name='defaultVlanID'],text,5,Pass
+59,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[1],text,Apply,Pass
+60,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],text,Apply & Save,Pass
+61,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],text,Refresh,Pass
+62,SET,xpath=//input[@name='port2Mode'],DLL,Trunk,Pass
+63,SET,xpath=//input[@name='port2UntaggedIngressFrames'],DLL,Tag,Pass
+64,SET,xpath=//input[@name='port2VlanID'],text,1,Pass
+65,SET,xpath=//input[@name='port2VlanPriority'],text,0,Pass
+66,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[1],text,Apply,Pass
+67,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],text,Apply & Save,Pass
+68,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],text,Refresh,Pass
+69,GET,xpath=//input[@name='defaultVlanID'],text,5,Pass
+70,GET,xpath=//input[@name='port2Mode'],DLL,1,Pass
+71,GET,xpath=//input[@name='port2UntaggedIngressFrames'],DLL,0,Pass
+72,GET,xpath=//input[@name='port2VlanID'],text,1,Pass
+73,GET,xpath=//input[@name='port2VlanPriority'],text,0,Pass
+74,SET,xpath=//input[@name='port2UntaggedIngressFrames'],DLL,Drop,Pass
+75,SET,xpath=//input[@name='port2AllowedVlans'],text,1,Pass
+76,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[1],text,Apply,Pass
+77,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],text,Apply & Save,Pass
+78,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],text,Refresh,Pass
+79,GET,xpath=//input[@name='port2UntaggedIngressFrames'],DLL,1,Pass
+80,GET,xpath=//input[@name='port2AllowedVlans'],text,1,Pass

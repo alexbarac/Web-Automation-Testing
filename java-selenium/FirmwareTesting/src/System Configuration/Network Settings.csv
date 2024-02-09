@@ -1,0 +1,32 @@
+id,Action,FieldID,FieldType,FieldValue,Result
+1,NAV,xPath,null,null,Pass
+2,SET,dhcp,DDL,disable,Pass
+3,SET,xpath=//input[@name='ipv4Address'],text,10.117.64.2,Pass
+4,SET,xpath=//input[@name='ipv4Netmask'],text,255.255.255.0,Pass
+5,SET,xpath=//input[@name='ipv4DefaultGateway'],text,10.117.64.250,Pass
+6,SET,xpath=//input[@name='ipv4DnsAddress1'],text,8.8.8.8,Pass
+7,SET,xpath=//input[@name='ipv4DnsAddress2'],text,8.8.4.8,Pass
+17,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[1],text,Apply,Pass
+18,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],text,Apply & Save,Pass
+19,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],text,Refresh,Pass
+8,GET,dhcp,DDL,1,Pass
+9,GET,xpath=//input[@name='ipv4Address'],text,192.168.25.12,Pass
+10,GET,xpath=//input[@name='ipv4Netmask'],text,255.255.255.0,Pass
+11,GET,xpath=//input[@name='ipv4DefaultGateway'],text,192.168.25.250,Pass
+12,GET,xpath=//input[@name='ipv4DnsAddress1'],text,8.8.8.8,Pass
+13,GET,xpath=//input[@name='ipv4DnsAddress2'],text,8.8.4.8,Pass
+14,SET,mgmtVlanEnable,checkbox,off,Pass
+17,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[1],text,Apply,Pass
+18,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],text,Apply & Save,Pass
+19,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],text,Refresh,Pass
+20,GET,mgmtVlanEnable,checkbox,off,Pass
+39,SET,vlan1Enable,checkbox,off,Pass
+40,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[1],text,Apply,Pass
+41,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],text,Apply & Save,Pass
+42,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],text,Refresh,Pass
+33,GET,vlan1Enable,checkbox,off,Pass
+44,SET,vlan2Enable,checkbox,off,Pass
+45,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[1],text,Apply,Pass
+46,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],text,Apply & Save,Pass
+47,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],text,Refresh,Pass
+56,GET,vlan2Enable,checkbox,off,Pass

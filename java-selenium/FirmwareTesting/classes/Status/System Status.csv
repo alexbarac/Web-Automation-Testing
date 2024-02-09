@@ -1,0 +1,36 @@
+id,Action,FieldID,FieldType,FieldValue,Result
+1,NAV,xPath,null,null,Pass
+2,SET,xpath=//input[@name='systemName'],text,Connect,Pass
+3,SET,xpath=//input[@name='systemDetails'],text,Device for Test,Pass
+4,SET,xpath=//input[@name='systemLocation'],text,Redline Craiova Lab,Pass
+5,SET,xpath=//input[@name='systemContact'],text,Alex Barac,Pass
+6,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[1],text,Apply,Pass
+7,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],text,Refresh,Pass
+8,GET,xpath=//input[@name='systemName'],text,Connect,Pass
+9,GET,xpath=//input[@name='systemDetails'],text,Device for Test,Pass
+10,GET,xpath=//input[@name='systemLocation'],text,Redline Craiova Lab,Pass
+11,GET,xpath=//input[@name='systemContact'],text,Alex Barac,Pass
+12,SET,dhcp,DDL,disable,Pass
+13,SET,syslog_enable,checkbox,on,Pass
+14,SET,xpath=//input[@name='syslog_serverIp'],text,192.168.25.22,Pass
+6,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[1],text,Apply,Pass
+16,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],text,Refresh,Pass
+17,GET,dhcp,DDL,1,Pass
+18,GET,syslog_enable,checkbox,on,Pass
+19,GET,xpath=//input[@name='syslog_serverIp'],text,192.168.25.22,Pass
+20,SET,dhcp,DDL,disable,Pass
+21,SET,xpath=//input[@name='ipv4Address'],text,10.117.64.2,Pass
+22,SET,xpath=//input[@name='ipv4Netmask'],text,255.255.255.0,Pass
+23,SET,xpath=//input[@name='ipv4DefaultGateway'],text,10.117.64.250,Pass
+24,SET,xpath=//input[@name='ipv4DnsAddress1'],text,8.8.8.8,Pass
+25,SET,xpath=//input[@name='ipv4DnsAddress2'],text,8.8.4.8,Pass
+26,SET,syslog_enable,checkbox,off,Pass
+6,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[1],text,Apply,Pass
+28,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],text,Refresh,Pass
+29,GET,dhcp,DDL,1,Pass
+30,GET,xpath=//input[@name='ipv4Address'],text,10.117.64.2,Pass
+31,GET,xpath=//input[@name='ipv4Netmask'],text,255.255.255.0,Pass
+32,GET,xpath=//input[@name='ipv4DefaultGateway'],text,10.117.64.250,Pass
+33,GET,xpath=//input[@name='ipv4DnsAddress1'],text,8.8.8.8,Pass
+34,GET,xpath=//input[@name='ipv4DnsAddress2'],text,8.8.4.8,Pass
+35,GET,syslog_enable,checkbox,off,Pass

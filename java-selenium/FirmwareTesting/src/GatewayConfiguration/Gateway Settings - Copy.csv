@@ -1,0 +1,184 @@
+id,Action,FieldID,FieldType,FieldValue,ExpectedResult
+1,NAV,xPath,null,null,Pass
+2,SET,gateway1_mode,DDL,Inactive,Pass
+3,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+4,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+5,GET,gateway1_mode,DDL,string:Inactive,Pass
+6,SET,gateway1_mode,DDL,Modbus_TCP_Server,Pass
+7,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+8,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+9,GET,gateway1_mode,DDL,2,Pass
+10,SET,gateway1_mode,DDL,Raw_TCP_Server,Pass
+11,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+12,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+13,SET,gateway1_interfaceBinding,DDL,Management,Pass
+14,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+15,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+16,GET,gateway1_interfaceBinding,DDL,0,Pass
+17,SET,gateway1_interfaceBinding,DDL,Sub-interface_1,Pass
+18,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+19,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+20,GET,gateway1_interfaceBinding,DDL,1,Pass
+21,SET,gateway1_interfaceBinding,DDL,Sub-interface_2,Pass
+22,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+23,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+24,GET,gateway1_interfaceBinding,DDL,2,Pass
+25,SET,gateway1_comPort,DDL,Unassigned,Pass
+26,SET,xpath=//input[@name='gateway1_raw_tcpServer_packetlen'],text,1000,Pass
+27,SET,xpath=//input[@name='gateway1_raw_tcpServer_forceTransmit'],text,20,Pass
+28,SET,gateway1_raw_tcpServer_enableDelim1,checkbox,on,Pass
+29,SET,xpath=//input[@name='gateway1_raw_tcpServer_delim1'],text,0xff,Pass
+30,SET,gateway1_raw_tcpServer_enableDelim2,checkbox,on,Pass
+31,SET,xpath=//input[@name='gateway1_raw_tcpServer_delim2'],text,0xf1,Pass
+32,SET,gateway1_raw_tcpServer_delimAction,DDL,Do_Nothing,Pass
+33,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+34,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+35,GET,gateway1_mode,DDL,1,Pass
+36,GET,gateway1_comPort,DDL,0,Pass
+37,GET,xpath=//input[@name='gateway1_raw_tcpServer_packetlen'],text,1000,Pass
+38,GET,xpath=//input[@name='gateway1_raw_tcpServer_forceTransmit'],text,20,Pass
+39,GET,gateway1_raw_tcpServer_enableDelim1,checkbox,on,Pass
+40,GET,xpath=//input[@name='gateway1_raw_tcpServer_delim1'],text,0xff,Pass
+41,GET,gateway1_raw_tcpServer_enableDelim2,checkbox,on,Pass
+42,GET,xpath=//input[@name='gateway1_raw_tcpServer_delim2'],text,0xf1,Pass
+43,GET,gateway1_raw_tcpServer_delimAction,DDL,0,Pass
+44,SET,gateway1_comPort,DDL,DATA1,Pass
+45,SET,gateway1_raw_tcpServer_enableDelim2,checkbox,off,Pass
+46,SET,gateway1_raw_tcpServer_delimAction,DDL,Delimiter_Plus_1,Pass
+47,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+49,GET,gateway1_comPort,DDL,1,Pass
+50,GET,gateway1_raw_tcpServer_enableDelim2,checkbox,off,Pass
+51,GET,gateway1_raw_tcpServer_delimAction,DDL,1,Pass
+52,SET,gateway1_raw_tcpServer_delimAction,DDL,Strip,Pass
+53,SET,xpath=//input[@name='gateway1_raw_tcpServer_tcpPort'],text,6000,Pass
+54,SET,xpath=//input[@name='gateway1_raw_tcpServer_maxConn'],text,8,Pass
+55,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+56,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+57,GET,gateway1_raw_tcpServer_delimAction,DDL,3,Pass
+58,GET,xpath=//input[@name='gateway1_raw_tcpServer_tcpPort'],text,6000,Pass
+59,GET,xpath=//input[@name='gateway1_raw_tcpServer_maxConn'],text,8,Pass
+60,SET,gateway2_mode,DDL,Inactive,Pass
+61,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+62,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+63,GET,gateway2_mode,DDL,0,Pass
+64,SET,gateway2_mode,DDL,Modbus_TCP_Server,Pass
+65,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+66,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+67,GET,gateway2_mode,DDL,2,Pass
+68,SET,gateway2_mode,DDL,Raw_TCP_Server,Pass
+69,SET,gateway2_comPort,DDL,Unassigned,Pass
+70,SET,gateway2_interfaceBinding,DDL,Management,Pass
+71,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+72,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+73,GET,gateway2_interfaceBinding,DDL,0,Pass
+74,SET,gateway2_interfaceBinding,DDL,Sub-interface_1,Pass
+75,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+76,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+77,GET,gateway2_interfaceBinding,DDL,1,Pass
+78,SET,gateway2_interfaceBinding,DDL,Sub-interface_2,Pass
+79,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+80,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+81,GET,gateway2_interfaceBinding,DDL,2,Pass
+82,SET,xpath=//input[@name='gateway2_raw_tcpServer_packetlen'],text,1000,Pass
+83,SET,xpath=//input[@name='gateway2_raw_tcpServer_forceTransmit'],text,20,Pass
+84,SET,gateway2_raw_tcpServer_enableDelim1,checkbox,on,Pass
+85,SET,xpath=//input[@name='gateway2_raw_tcpServer_delim1'],text,0xFF,Pass
+86,SET,gateway2_raw_tcpServer_enableDelim2,checkbox,on,Pass
+87,SET,xpath=//input[@name='gateway2_raw_tcpServer_delim2'],text,0xF1,Pass
+88,SET,gateway2_raw_tcpServer_delimAction,DDL,Do_Nothing,Pass
+89,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+90,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+91,GET,gateway2_mode,DDL,1,Pass
+92,GET,gateway2_comPort,DDL,0,Pass
+93,GET,xpath=//input[@name='gateway2_raw_tcpServer_packetlen'],text,1000,Pass
+94,GET,xpath=//input[@name='gateway2_raw_tcpServer_forceTransmit'],text,20,Pass
+95,GET,gateway2_raw_tcpServer_enableDelim1,checkbox,on,Pass
+96,GET,xpath=//input[@name='gateway2_raw_tcpServer_delim1'],text,0xff,Pass
+97,GET,gateway2_raw_tcpServer_enableDelim2,checkbox,on,Pass
+98,GET,xpath=//input[@name='gateway2_raw_tcpServer_delim2'],text,0xf1,Pass
+99,GET,gateway2_raw_tcpServer_delimAction,DDL,0,Pass
+100,SET,gateway2_comPort,DDL,DATA1,Pass
+101,SET,gateway2_raw_tcpServer_enableDelim2,checkbox,off,Pass
+102,SET,gateway2_raw_tcpServer_delimAction,DDL,Delimiter_Plus_1,Pass
+103,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+104,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+105,GET,gateway2_comPort,DDL,1,Pass
+106,GET,gateway2_raw_tcpServer_enableDelim2,checkbox,off,Pass
+107,GET,gateway2_raw_tcpServer_delimAction,DDL,1,Pass
+108,SET,gateway1_comPort,DDL,DATA2,Pass
+109,SET,gateway1_raw_tcpServer_enableDelim1,checkbox,off,Pass
+110,SET,gateway1_raw_tcpServer_delimAction,DDL,Delimiter_Plus_2,Pass
+111,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+112,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+113,GET,gateway1_comPort,DDL,2,Pass
+114,GET,gateway1_raw_tcpServer_enableDelim1,checkbox,off,Pass
+115,GET,gateway1_raw_tcpServer_delimAction,DDL,3,Pass
+116,SET,gateway1_comPort,DDL,DATA1,Pass
+117,SET,gateway2_comPort,DDL,DATA2,Pass
+118,SET,gateway2_raw_tcpServer_enableDelim1,checkbox,off,Pass
+119,SET,gateway2_raw_tcpServer_delimAction,DDL,Delimiter_Plus_2,Pass
+120,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+121,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+122,GET,gateway2_comPort,DDL,2,Pass
+123,GET,gateway2_raw_tcpServer_enableDelim1,checkbox,off,Pass
+124,GET,gateway2_raw_tcpServer_delimAction,DDL,1,Pass
+125,GET,gateway1_comPort,DDL,1,Pass
+126,SET,gateway2_raw_tcpServer_delimAction,DDL,Strip,Pass
+127,SET,xpath=//input[@name='gateway2_raw_tcpServer_tcpPort'],text,5500,Pass
+128,SET,xpath=//input[@name='gateway2_raw_tcpServer_maxConn'],text,8,Pass
+129,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+130,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+131,GET,gateway2_raw_tcpServer_delimAction,DDL,1,Pass
+132,GET,xpath=//input[@name='gateway2_raw_tcpServer_tcpPort'],text,5500,Pass
+133,GET,xpath=//input[@name='gateway2_raw_tcpServer_maxConn'],text,8,Pass
+134,SET,gateway1_mode,DDL,Inactive,Pass
+135,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+136,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+137,GET,gateway1_mode,DDL,0,Pass
+138,SET,gateway1_mode,DDL,Raw_TCP_Server,Pass
+139,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+140,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+141,GET,gateway1_mode,DDL,1,Pass
+142,SET,gateway1_mode,DDL,Modbus_TCP_Server,Pass
+143,SET,gateway1_comPort,DDL,Unassigned,Pass
+144,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+145,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+146,GET,gateway1_mode,DDL,2,Pass
+147,GET,gateway1_comPort,DDL,0,Pass
+148,SET,gateway1_comPort,DDL,DATA1,Pass
+149,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+150,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+151,GET,gateway1_mode,DDL,2,Pass
+152,GET,gateway1_comPort,DDL,1,Pass
+153,SET,xpath=//input[@name='gateway1_modbus_tcpServer_tcpPort'],text,502,Pass
+154,SET,xpath=//input[@name='gateway1_modbus_tcpServer_maxConn'],text,3,Pass
+155,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+156,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+157,GET,xpath=//input[@name='gateway1_modbus_tcpServer_tcpPort'],text,502,Pass
+158,GET,xpath=//input[@name='gateway1_modbus_tcpServer_maxConn'],text,3,Pass
+159,SET,gateway2_mode,DDL,Inactive,Pass
+160,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+161,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+162,GET,gateway2_mode,DDL,0,Pass
+163,SET,gateway2_mode,DDL,Raw_TCP_Server,Pass
+164,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+165,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+166,GET,gateway2_mode,DDL,1,Pass
+167,SET,gateway2_mode,DDL,Modbus_TCP_Server,Pass
+168,SET,gateway2_comPort,DDL,Unassigned,Pass
+169,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+170,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+171,GET,gateway2_mode,DDL,2,Pass
+172,GET,gateway2_comPort,DDL,0,Pass
+173,SET,gateway2_comPort,DDL,DATA2,Pass
+174,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+175,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+176,GET,gateway2_mode,DDL,2,Pass
+177,GET,gateway2_comPort,DDL,2,Pass
+178,SET,xpath=//input[@name='gateway2_modbus_tcpServer_tcpPort'],text,503,Pass
+179,SET,xpath=//input[@name='gateway2_modbus_tcpServer_maxConn'],text,1,Pass
+180,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2],button,Apply &Save,Pass
+181,CLICK,xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3],button,Refresh,Pass
+182,GET,xpath=//input[@name='gateway2_modbus_tcpServer_tcpPort'],text,503,Pass
+183,GET,xpath=//input[@name='gateway2_modbus_tcpServer_maxConn'],text,1,Pass

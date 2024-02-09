@@ -1,0 +1,191 @@
+id,Action,FieldID,FieldType,FieldValue,ExpectedResult
+1,NAV,xPath,null,null,Pass
+2,SET,xpath=//input[@name='data1_alias'],text,testalias1,Pass
+3,SET,data1_porttype,DDL,LOOPBACK,Pass
+4,SET,data1_bitrate,DDL,75,Pass
+5,SET,data1_parity,DDL,None,Pass
+6,SET,data1_databits,DDL,5,Pass
+7,SET,data1_stopbits,DDL,1,Pass
+8,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+9,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+10,SET,xpath=//input[@name='data1_alias'],text,testalias1,Pass
+11,GET,data1_porttype,DDL,0,Pass
+12,GET,data1_bitrate,DDL,0,Pass
+13,GET,data1_parity,DDL,0,Pass
+14,GET,data1_databits,DDL,0,Pass
+15,GET,data1_stopbits,DDL,0,Pass
+16,SET,data1_porttype,DDL,RS-232,Pass
+17,SET,data1_bitrate,DDL,110,Pass
+18,SET,data1_parity,DDL,Odd,Pass
+19,SET,data1_databits,DDL,6,Pass
+20,SET,data1_stopbits,DDL,2,Pass
+21,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+22,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+23,GET,data1_porttype,DDL,1,Pass
+24,GET,data1_bitrate,DDL,1,Pass
+25,GET,data1_parity,DDL,1,Pass
+26,GET,data1_databits,DDL,1,Pass
+27,GET,data1_stopbits,DDL,1,Pass
+28,SET,data1_porttype,DDL,RS-422,Pass
+29,SET,data1_bitrate,DDL,134,Pass
+30,SET,data1_parity,DDL,Even,Pass
+31,SET,data1_databits,DDL,7,Pass
+32,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+33,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+34,GET,data1_porttype,DDL,2,Pass
+35,GET,data1_bitrate,DDL,2,Pass
+36,GET,data1_parity,DDL,2,Pass
+37,GET,data1_databits,DDL,2,Pass
+38,SET,data1_porttype,DDL,RS-485-2W,Pass
+39,SET,data1_bitrate,DDL,150,Pass
+40,SET,data1_databits,DDL,8,Pass
+41,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+42,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+43,GET,data1_porttype,DDL,3,Pass
+44,GET,data1_bitrate,DDL,3,Pass
+45,GET,data1_databits,DDL,3,Pass
+46,SET,data1_porttype,DDL,RS-485-4W,Pass
+47,SET,data1_bitrate,DDL,200,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+50,GET,data1_porttype,DDL,4,Pass
+51,GET,data1_bitrate,DDL,4,Pass
+47,SET,data1_bitrate,DDL,300,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+51,GET,data1_bitrate,DDL,5,Pass
+47,SET,data1_bitrate,DDL,600,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+51,GET,data1_bitrate,DDL,6,Pass
+47,SET,data1_bitrate,DDL,1200,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+51,GET,data1_bitrate,DDL,7,Pass
+47,SET,data1_bitrate,DDL,1800,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+51,GET,data1_bitrate,DDL,8,Pass
+47,SET,data1_bitrate,DDL,2400,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+51,GET,data1_bitrate,DDL,9,Pass
+47,SET,data1_bitrate,DDL,4800,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+51,GET,data1_bitrate,DDL,10,Pass
+47,SET,data1_bitrate,DDL,9600,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+51,GET,data1_bitrate,DDL,11,Pass
+47,SET,data1_bitrate,DDL,19200,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+51,GET,data1_bitrate,DDL,12,Pass
+47,SET,data1_bitrate,DDL,38400,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+51,GET,data1_bitrate,DDL,13,Pass
+47,SET,data1_bitrate,DDL,57600,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+51,GET,data1_bitrate,DDL,14,Pass
+47,SET,data1_bitrate,DDL,115200,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+51,GET,data1_bitrate,DDL,15,Pass
+1,NAV,xPath,null,null,Pass
+2,SET,xpath=//input[@name='data2_alias'],text,testalias1,Pass
+3,SET,data2_porttype,DDL,LOOPBACK,Pass
+4,SET,data2_bitrate,DDL,75,Pass
+5,SET,data2_parity,DDL,None,Pass
+6,SET,data2_databits,DDL,5,Pass
+7,SET,data2_stopbits,DDL,1,Pass
+8,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+9,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+10,SET,xpath=//input[@name='data2_alias'],text,testalias1,Pass
+11,GET,data2_porttype,DDL,0,Pass
+12,GET,data2_bitrate,DDL,0,Pass
+13,GET,data2_parity,DDL,0,Pass
+14,GET,data2_databits,DDL,0,Pass
+15,GET,data2_stopbits,DDL,0,Pass
+16,SET,data2_porttype,DDL,RS-232,Pass
+17,SET,data2_bitrate,DDL,110,Pass
+18,SET,data2_parity,DDL,Odd,Pass
+19,SET,data2_databits,DDL,6,Pass
+20,SET,data2_stopbits,DDL,2,Pass
+21,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+22,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+23,GET,data2_porttype,DDL,1,Pass
+24,GET,data2_bitrate,DDL,1,Pass
+25,GET,data2_parity,DDL,1,Pass
+26,GET,data2_databits,DDL,1,Pass
+27,GET,data2_stopbits,DDL,1,Pass
+28,SET,data2_porttype,DDL,RS-422,Pass
+29,SET,data2_bitrate,DDL,134,Pass
+30,SET,data2_parity,DDL,Even,Pass
+31,SET,data2_databits,DDL,7,Pass
+32,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+33,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+34,GET,data2_porttype,DDL,2,Pass
+35,GET,data2_bitrate,DDL,2,Pass
+36,GET,data2_parity,DDL,2,Pass
+37,GET,data2_databits,DDL,2,Pass
+38,SET,data2_porttype,DDL,RS-485-2W,Pass
+39,SET,data2_bitrate,DDL,150,Pass
+40,SET,data2_databits,DDL,8,Pass
+41,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+42,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+43,GET,data2_porttype,DDL,3,Pass
+44,GET,data2_bitrate,DDL,3,Pass
+45,GET,data2_databits,DDL,3,Pass
+46,SET,data2_porttype,DDL,RS-485-4W,Pass
+47,SET,data2_bitrate,DDL,200,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+50,GET,data2_porttype,DDL,4,Pass
+51,GET,data2_bitrate,DDL,4,Pass
+47,SET,data2_bitrate,DDL,300,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+51,GET,data2_bitrate,DDL,5,Pass
+47,SET,data2_bitrate,DDL,600,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+51,GET,data2_bitrate,DDL,6,Pass
+47,SET,data2_bitrate,DDL,1200,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+51,GET,data2_bitrate,DDL,7,Pass
+47,SET,data2_bitrate,DDL,1800,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+51,GET,data2_bitrate,DDL,8,Pass
+47,SET,data2_bitrate,DDL,2400,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+51,GET,data2_bitrate,DDL,9,Pass
+47,SET,data2_bitrate,DDL,4800,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+51,GET,data2_bitrate,DDL,10,Pass
+47,SET,data2_bitrate,DDL,9600,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+51,GET,data2_bitrate,DDL,11,Pass
+47,SET,data2_bitrate,DDL,19200,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+51,GET,data2_bitrate,DDL,12,Pass
+47,SET,data2_bitrate,DDL,38400,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+51,GET,data2_bitrate,DDL,13,Pass
+47,SET,data2_bitrate,DDL,57600,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+51,GET,data2_bitrate,DDL,14,Pass
+47,SET,data2_bitrate,DDL,115200,Pass
+48,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[2],button,Apply &Save,Pass
+49,CLICK,xpath=//html/body/div/div[2]/div/div/form/div/button[3],button,Refresh,Pass
+51,GET,data2_bitrate,DDL,15,Pass

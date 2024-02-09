@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+<head><title>Automated UI Testing - RegressionTest</title>
+<style type="text/css">
+
+#box-table-a
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	margin: 45px;
+	min-width: 50%;
+	text-align: left;
+	border-collapse: collapse;
+}
+#box-table-a th
+{
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	background: #b9c9fe;
+	border-top: 4px solid #aabcfe;
+	border-bottom: 1px solid #fff;
+	color: #039;
+}
+#box-table-a td
+{
+	padding: 8px;
+	background: #e8edff;
+	border-bottom: 1px solid #fff;
+	color: #669;
+	border-top: 1px solid transparent;
+}
+#box-table-a tr:hover td
+{
+	background: #d0dafd;
+	color: #339;
+}
+
+p.text
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 14px; 
+	position: relative; 
+	left: 45px;
+}
+
+div.left
+{
+    position: relative; 
+	left: 45px;
+}
+
+@page {
+  margin: 10%;
+  counter-increment: page;
+
+  @top-right {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+    content: "Page " counter(page) " of " counter(pages);
+  }
+}
+
+</style>
+</head>
+<body>
+<script type="text/javascript">function hideTable(tableID, action) {
+var tableObject = document.getElementById(tableID);
+if (action == 'visibility'){
+tableObject.style.visibility = 'hidden';}
+else if (action == 'block'){
+tableObject.style.display = 'none';}
+tableObject.style.position = 'absolute';
+}
+function showTable(tableID, action) {
+var tableObject = document.getElementById(tableID);
+if (action == 'visibility')
+tableObject.style.visibility = 'visible';
+else if (action == 'block'){
+tableObject.style.display = 'block';}
+tableObject.style.position = 'absolute';
+}if (document.getElementById) onload = function () {
+    var h2 = document.createElement ('H2');
+    h2.appendChild (document.createTextNode ('Contents'));
+    var ul = document.createElement ('UL');
+  
+    var e, i = 0,last=1;//assumes first header found is h1
+	
+    // Return if there is no add toc command present
+	if (document.getElementById('contents') == null)
+	{
+		return;
+	}
+    while (e = document.getElementsByTagName ('*')[i++]) {
+     if (e.id != "") {
+        if (/^h[123456]$/i.test (e.tagName)) {
+            //alert(last+"--"+e.tagName.substring(1,2));
+            var newl = document.createElement ('UL');
+            var li = document.createElement ('LI');
+            var a = document.createElement ('A');
+            a.appendChild (document.createTextNode (e.firstChild.data))
+            a.href = '#' + e.id;
+            li.appendChild (a);
+          
+            if(e.tagName.substring(1,2)>1){
+                newl.appendChild (li);
+                var n=2;
+                
+                while(n<e.tagName.substring(1,2)){
+                    var newl2 =document.createElement ('UL');
+                    newl2.appendChild (newl);
+                    var newl =newl2;
+                    var n=n+1;
+                }
+                ul.appendChild (newl);
+            }else{
+                ul.appendChild (li);
+            }
+            var last=e.tagName.substring(1,2);
+        }
+      }
+    }
+    document.getElementById('contents').appendChild (h2);
+    document.getElementById('contents').appendChild (ul);
+}
+
+</script>
+<p style="font-size:26px; text-align:center;">Detailed Report for Test Suite: RegressionTest</p>
+<a name="top"><div id="contents">
+</div></a>
+<hr color="blue">
+<br>
+<h1 id=1-Gateway Settings>1-Gateway Settings</h1>
+<h3>Test Description: Verify gateway settings</h3>
+<br>
+<table id="box-table-a1">
+<thead><tr>
+<th>
+id
+</th>
+<th>
+Action
+</th>
+<th>
+FieldID
+</th>
+<th>
+FieldType
+</th>
+<th>
+FieldValue
+</th>
+<th>
+ExpectedResult
+</th>
+</tr></thead>
+<tbody><tr>
+<td>
+1
+</td>
+<td>
+NAV
+</td>
+<td>
+xPath
+</td>
+<td>
+null
+</td>
+<td>
+null
+</td>
+<td>
+Pass
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+SET
+</td>
+<td>
+gateway1_mode
+</td>
+<td>
+DDL
+</td>
+<td>
+Inactive
+</td>
+<td>
+Pass
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+CLICK
+</td>
+<td>
+xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[2]
+</td>
+<td>
+button
+</td>
+<td>
+Apply &Save
+</td>
+<td>
+Pass
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+CLICK
+</td>
+<td>
+xpath=//html/body/div/div[2]/div/div/form/table/tbody/tr/td[1]/div/button[3]
+</td>
+<td>
+button
+</td>
+<td>
+Refresh
+</td>
+<td>
+Pass
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+GET
+</td>
+<td>
+gateway1_mode
+</td>
+<td>
+DDL
+</td>
+<td>
+string:Inactive
+</td>
+<td>
+Pass
+</td>
+</tr>
+</tbody></table>
+<style type="text/css">
+
+#box-table-a1
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	margin: 45px;
+	min-width: 50%;
+	text-align: left;
+	border-collapse: collapse;
+}
+#box-table-a1 th
+{
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	background: #b9c9fe;
+	border-top: 4px solid #aabcfe;
+	border-bottom: 1px solid #fff;
+	color: #039;
+}
+#box-table-a1 td
+{
+	padding: 8px;
+	background: #e8edff;
+	border-bottom: 1px solid #fff;
+	color: #669;
+	border-top: 1px solid transparent;
+}
+#box-table-a tr:hover td
+{
+	background: #d0dafd;
+	color: #339;
+}
+
+p.text
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 14px; 
+	position: relative; 
+	left: 45px;
+}
+
+div.left
+{
+    position: relative; 
+	left: 45px;
+}
+
+@page {
+  margin: 10%;
+  counter-increment: page;
+
+  @top-right {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+    content: "Page " counter(page) " of " counter(pages);
+  }
+}
+
+</style>
+<button onclick="hideTable('box-table-a1', 'block')">Hide Test</button>
+<button onclick="showTable('box-table-a1', 'block')">Show Test</button>
+<br>
+<b>Total Steps: </b>5
+<br>
+<b>Passed: </b>5
+<br>
+<b> Failed: </b>0
+<br>
+<font size="5" color="Green"> Test Case Passed </font>
+<br>
+<br>
+<a href="#top">Return to Top</a>
+<hr color="blue">
+</body>
+</html>
