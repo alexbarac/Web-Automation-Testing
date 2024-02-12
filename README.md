@@ -11,4 +11,6 @@ mocking features to simulate HTTP requests, inspect responses, and verify the co
 In the second framework, each page of the SEO web application is equipped with its own dedicated testing class, forming a structured and systematic approach to quality assurance. 
 The integration of these tests into the continuous integration process underscores their importance in maintaining the application's reliability and performance. With each deployment, these tests are automatically triggered,
 providing immediate feedback on the health of the application and safeguarding against any inadvertent changes that could impact its SEO effectiveness or user experience. 
-This diligent testing strategy not only bolsters the application's stability but also instills confidence in its ability to deliver optimal results in the competitive landscape of search engine optimization.</sub>
+This diligent testing strategy not only bolsters the application's stability but also instills confidence in its ability to deliver optimal results in the competitive landscape of search engine optimization.
+
+- CasperJS is a navigation scripting and testing utility for PhantomJS and SlimerJS. It allows you to automate interactions with web pages, making it suitable for frontend testing.
